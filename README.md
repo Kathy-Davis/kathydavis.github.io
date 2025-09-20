@@ -1,2 +1,2 @@
-# Kathy-Davis-Manual-QA.github.io
+# kathydavis.github.io
 Professional QA Manual Tester Portfolio
