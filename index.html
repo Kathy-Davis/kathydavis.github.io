@@ -3,143 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathy Davis - Manual QA Tester</title>
+    <title>Kathy Davis - QA Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6366f1',
+                        'secondary': '#8b5cf6',
+                    }
+                }
+            }
         }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .skill-bar {
-            height: 8px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 4px;
-        }
-        .typing-animation {
-            border-right: 2px solid #667eea;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #667eea }
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-gray-800">Kathy Davis</div>
+                <div class="text-2xl font-bold text-primary">Kathy Davis</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition duration-300">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition duration-300">About</a>
-                    <a href="#skills" class="text-gray-600 hover:text-purple-600 transition duration-300">Skills</a>
-                    <a href="#projects" class="text-gray-600 hover:text-purple-600 transition duration-300">Projects</a>
-                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition duration-300">Contact</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition duration-300">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition duration-300">Skills</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
+                    <a href="#certifications" class="text-gray-700 hover:text-primary transition duration-300">Certifications</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-purple-600">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#home" class="block text-gray-600 hover:text-purple-600 py-2">Home</a>
-                <a href="#about" class="block text-gray-600 hover:text-purple-600 py-2">About</a>
-                <a href="#skills" class="block text-gray-600 hover:text-purple-600 py-2">Skills</a>
-                <a href="#projects" class="block text-gray-600 hover:text-purple-600 py-2">Projects</a>
-                <a href="#contact" class="block text-gray-600 hover:text-purple-600 py-2">Contact</a>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition duration-300">About</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Skills</a>
+                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
+                <a href="#certifications" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Certifications</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
-        <div class="text-center px-4">
-            <div class="floating mb-8">
-                <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl">
-                    <i class="fas fa-bug text-6xl text-purple-600"></i>
-                </div>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Kathy Davis</h1>
-            <div class="text-xl md:text-2xl mb-8 h-8 overflow-hidden">
-                <p class="typing-animation whitespace-nowrap">Manual QA Tester & Quality Assurance Specialist</p>
-            </div>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Dedicated to ensuring software quality through meticulous testing and attention to detail
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                Quality Assurance
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Professional
+                </span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Dedicated to ensuring software excellence through meticulous testing, process improvement, and user-focused quality solutions.
             </p>
-            <div class="space-x-4">
-                <a href="#contact" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block">
-                    Get In Touch
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="bg-primary hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
+                    View My Work
                 </a>
-                <a href="#projects" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300 inline-block">
-                    View Projects
+                <a href="#contact" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+                    Get In Touch
                 </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-            </div>
+    <section id="about" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Me</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-8 rounded-2xl">
-                        <i class="fas fa-search text-6xl text-purple-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Quality Focused</h3>
-                        <p class="text-gray-600">
-                            Passionate about delivering exceptional software quality through comprehensive manual testing methodologies and keen attention to detail.
-                        </p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Passionate About Quality</h3>
+                    <p class="text-gray-600 mb-6">
+                        With a keen eye for detail and a commitment to excellence, I specialize in comprehensive quality assurance processes that ensure software products meet the highest standards of functionality, usability, and reliability.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My approach combines systematic testing methodologies with creative problem-solving to identify potential issues before they impact end users.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Detail-Oriented</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Problem Solver</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Team Player</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Continuous Learner</span>
                     </div>
                 </div>
-                <div class="space-y-6">
-                    <h3 class="text-3xl font-bold text-gray-800">Manual QA Testing Professional</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Based in St. Louis, MO, I specialize in manual quality assurance testing with a focus on user experience, functionality, and comprehensive test case development. My approach combines systematic testing methodologies with creative problem-solving to identify issues before they reach end users.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-purple-600"></i>
-                            <span class="text-gray-600">St. Louis, MO</span>
+                <div class="bg-gradient-to-br from-primary/20 to-secondary/20 p-8 rounded-2xl">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <span class="text-4xl text-white font-bold">KD</span>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-envelope text-purple-600"></i>
-                            <a href="mailto:kathydavis.manualqa@gmail.com" class="text-gray-600 hover:text-purple-600">kathydavis.manualqa@gmail.com</a>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fab fa-linkedin text-purple-600"></i>
-                            <a href="https://www.linkedin.com/in/kathy100davis" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-purple-600">LinkedIn Profile</a>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fab fa-github text-purple-600"></i>
-                            <a href="https://kathydavis.github.io" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-purple-600">GitHub Portfolio</a>
-                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Kathy Davis</h4>
+                        <p class="text-gray-600">QA Professional</p>
                     </div>
                 </div>
             </div>
@@ -147,118 +108,176 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills & Expertise</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-            </div>
+    <section id="skills" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Skills & Expertise</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-clipboard-check text-5xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Manual Testing</h3>
-                        <div class="space-y-3">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Test Case Design</span>
-                                    <span class="text-sm text-gray-600">95%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Functional Testing</span>
-                                    <span class="text-sm text-gray-600">90%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Regression Testing</span>
-                                    <span class="text-sm text-gray-600">88%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 88%"></div>
-                                </div>
-                            </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Manual Testing</h3>
+                    <p class="text-gray-600">Comprehensive manual testing strategies including functional, usability, and exploratory testing approaches.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Process Improvement</h3>
+                    <p class="text-gray-600">Identifying bottlenecks and implementing efficient QA processes to enhance team productivity and product quality.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Documentation</h3>
+                    <p class="text-gray-600">Creating clear, comprehensive test plans, bug reports, and quality documentation for stakeholder communication.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Mobile Testing</h3>
+                    <p class="text-gray-600">Cross-platform mobile application testing ensuring consistent user experience across devices and operating systems.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Team Collaboration</h3>
+                    <p class="text-gray-600">Working effectively with development teams, product managers, and stakeholders to ensure quality throughout the SDLC.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Performance Testing</h3>
+                    <p class="text-gray-600">Evaluating application performance, load handling, and identifying optimization opportunities for better user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Instructors Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 - Bug Discovery -->
+                <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                            </svg>
                         </div>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-4 italic">
+                        "Awesome. Good job finding this bug. Keep it up."
+                    </blockquote>
+                    <div class="text-sm text-gray-600">
+                        <p class="font-semibold">QA Instructor</p>
+                        <p>Bug Discovery Excellence</p>
                     </div>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-mobile-alt text-5xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Platform Testing</h3>
-                        <div class="space-y-3">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Web Applications</span>
-                                    <span class="text-sm text-gray-600">92%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Mobile Testing</span>
-                                    <span class="text-sm text-gray-600">85%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Cross-browser Testing</span>
-                                    <span class="text-sm text-gray-600">87%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 87%"></div>
-                                </div>
-                            </div>
+                <!-- Testimonial 2 - Test Execution -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-4 italic">
+                        "Good job executing these test cases."
+                    </blockquote>
+                    <div class="text-sm text-gray-600">
+                        <p class="font-semibold">QA Instructor</p>
+                        <p>Test Execution Excellence</p>
                     </div>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-bug text-5xl text-red-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Bug Management</h3>
-                        <div class="space-y-3">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Bug Identification</span>
-                                    <span class="text-sm text-gray-600">93%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 93%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Documentation</span>
-                                    <span class="text-sm text-gray-600">96%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 96%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="text-sm text-gray-600">Issue Tracking</span>
-                                    <span class="text-sm text-gray-600">89%</span>
-                                </div>
-                                <div class="bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar rounded-full h-2" style="width: 89%"></div>
-                                </div>
-                            </div>
+                <!-- Testimonial 3 - Documentation -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
                         </div>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 mb-4 italic">
+                        "I love how you created your steps. This is very easy to understand and follow. Keep up the good work."
+                    </blockquote>
+                    <div class="text-sm text-gray-600">
+                        <p class="font-semibold">QA Instructor</p>
+                        <p>Documentation Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Certifications</h2>
+            <div class="flex justify-center">
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 max-w-md">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">QA Professional Certification</h3>
+                        <p class="text-lg text-primary font-semibold mb-2">Careerist Bootcamp</p>
+                        <p class="text-gray-600 mb-4">Comprehensive Quality Assurance training program covering manual testing, test case design, bug reporting, and industry best practices.</p>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Manual Testing</span>
+                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full">Test Cases</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Bug Reporting</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SDLC</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1hJ2iAK6lEpDpqX9vCdCiIcDq9UZsu5wA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            View Certificate
+                        </a>
                     </div>
                 </div>
             </div>
@@ -266,138 +285,270 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Projects & Examples</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-4"></div>
-                <p class="text-gray-600">Testing examples and case studies (more coming soon!)</p>
-            </div>
+    <section id="projects" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Featured Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-leaf text-4xl text-green-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Calm App Analysis</h3>
-                        <p class="text-gray-600 mb-4">Login page usability and functionality analysis</p>
-                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Ready to View</span>
+                <!-- Project 1 - Calm App Analysis -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">Calm App</h4>
+                            <p class="text-sm opacity-90">UX Analysis</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Calm App Analysis</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive UX analysis of the Calm meditation app, evaluating user interface design, navigation flow, and accessibility features.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">UX Analysis</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Mobile App</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Accessibility</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <a href="https://drive.google.com/file/d/1rmhJ5C4EEq53AU9RPE8KvPvPYDXigkCu/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                            View Analysis
+                        </a>
                     </div>
                 </div>
-                
-                <div class="card-hover bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-file-alt text-4xl text-yellow-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Test Case Examples</h3>
-                        <p class="text-gray-600 mb-4">Comprehensive test cases for various scenarios</p>
-                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">In Progress</span>
+
+                <!-- Project 2 - Contract Management -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">Contract</h4>
+                            <p class="text-sm opacity-90">Management</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Contract Management App</h3>
+                    <p class="text-gray-600 mb-4">Complete testing documentation including test cases and bug reports. Features discovery of an intermittent bug that others missed during testing cycles.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Test Cases</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Bug Discovery</span>
+                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Flaky Bug</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Documentation</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <a href="https://docs.google.com/spreadsheets/d/140l7ciSNw9HE6yZUYIbzkH6YlaqMWO5gsJFry1VskQw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                            View Test Cases & Bug Reports
+                        </a>
                     </div>
                 </div>
-                
-                <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-lg">
-                    <div class="text-center">
-                        <i class="fas fa-chart-line text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Bug Reports</h3>
-                        <p class="text-gray-600 mb-4">Detailed bug documentation and tracking</p>
-                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Coming Soon</span>
+
+                <!-- Project 3 - Global Real Estate -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">Real Estate</h4>
+                            <p class="text-sm opacity-90">Global App</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Global Real Estate App</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive testing of a global real estate platform. Discovered a critical navigation bug that trapped users in the help section with no return path - a unique find that others missed.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Critical Bug</span>
+                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Unique Discovery</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Navigation Testing</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">UX Impact</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <a href="https://docs.google.com/spreadsheets/d/175I7MmNpSnH0oNU1wKpKFx-6Too2jAQE0tqQDjz_SvY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                            View Test Cases & Bug Reports
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-12">
-                <p class="text-gray-600 mb-4">More examples will be added as projects are completed and properly redacted for confidentiality.</p>
-                <div class="inline-flex items-center space-x-2 text-purple-600">
-                    <i class="fas fa-clock"></i>
-                    <span>Check back soon for updates!</span>
+
+                <!-- Project 4 - Coffee Cafe App -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2,21V19H20V21H2M20,8V5L18,5V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">Coffee Cafe</h4>
+                            <p class="text-sm opacity-90">Mobile App</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Coffee Cafe App</h3>
+                    <p class="text-gray-600 mb-4">Complete mobile app testing including functional test cases and detailed bug reports. Comprehensive coverage of ordering flow, payment processing, and user experience features.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Mobile Testing</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Test Cases</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Bug Reports</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">E-commerce</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <a href="https://docs.google.com/spreadsheets/d/1T-OVdhQLsHdWrGfpwK70gSjyvv8vzFk0E8cBP4y1I8o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                            View Test Cases & Bug Reports
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Task Management Environmental Testing -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M16.5,16L13.5,13.5V10.5H15V12.75L17.25,15L16.5,16M12.5,8A4.5,4.5 0 0,0 8,12.5A4.5,4.5 0 0,0 12.5,17A4.5,4.5 0 0,0 17,12.5A4.5,4.5 0 0,0 12.5,8Z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">Task Management</h4>
+                            <p class="text-sm opacity-90">Environment Testing</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Task Management Environmental Testing</h3>
+                    <p class="text-gray-600 mb-4">Specialized environmental testing for task management systems. Focus on cross-platform compatibility, performance under different conditions, and system integration testing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Environmental Testing</span>
+                        <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Cross-Platform</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">System Integration</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Performance</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <a href="https://docs.google.com/spreadsheets/d/1yWamGL-sjH1O-nW7ILW3wqrPMIhO8XPQVFXhnwX4KFQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                            View Environmental Test Cases
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 - SQL Database Testing -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/>
+                            </svg>
+                            <h4 class="text-lg font-semibold">SQL Database</h4>
+                            <p class="text-sm opacity-90">Query Testing</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SQL Database Testing</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive SQL query testing and database validation. Multiple test scenarios covering data integrity, performance optimization, and complex query validation across different database systems.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">SQL Queries</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Database Testing</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Data Validation</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Performance</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
+                        <div class="space-y-2">
+                            <a href="https://drive.google.com/file/d/1EQkJh5RY0M1EwG4f8bFfGk9rkkUjFa2f/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
+                                SQL Queries Set 1
+                            </a>
+                            <a href="https://drive.google.com/file/d/1yzlPnhH-A2y76wLPFxk84ALkOBlptEEB/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
+                                SQL Queries Set 2
+                            </a>
+                            <a href="https://drive.google.com/file/d/1rjdFxi7d6uhmNbxxd4qGHTaRtakB1-1x/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
+                                SQL Queries Set 3
+                            </a>
+                            <div class="flex space-x-2">
+                                <a href="https://drive.google.com/file/d/1N5jk7W3T0qL9kJSsvqIK1EIxhw-nAJqP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
+                                    Set 4
+                                </a>
+                                <a href="https://drive.google.com/file/d/1fhU0QvbzRNwbEUBzslKiqFfr62EnbN5-/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
+                                    Set 5
+                                </a>
+                                <a href="https://drive.google.com/file/d/1VbNhZvLkllZH1PSytqfwRr6KR0BZJ3mo/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
+                                    Set 6
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
-                <div class="w-24 h-1 bg-white mx-auto mb-4"></div>
-                <p class="text-xl opacity-90">Ready to discuss your QA testing needs?</p>
+    <section id="contact" class="py-16 px-4 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Let's Connect</h2>
+            <p class="text-xl text-gray-600 mb-12">
+                Ready to discuss how quality assurance can enhance your project? I'd love to hear from you.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600">kathy.davis@email.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6M8 8v10l4-4 4 4V8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">LinkedIn</h3>
+                    <p class="text-gray-600">linkedin.com/in/kathydavis</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Location</h3>
+                    <p class="text-gray-600">Available Remote</p>
+                </div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-envelope text-2xl"></i>
-                            <div>
-                                <p class="font-semibold">Email</p>
-                                <a href="mailto:kathydavis.manualqa@gmail.com" class="hover:text-gray-200 transition duration-300">kathydavis.manualqa@gmail.com</a>
-                            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h3>
+                <form class="space-y-6" id="contact-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-2xl"></i>
-                            <div>
-                                <p class="font-semibold">Location</p>
-                                <p>St. Louis, MO</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                            <div>
-                                <p class="font-semibold">LinkedIn</p>
-                                <a href="https://www.linkedin.com/in/kathy100davis" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition duration-300">linkedin.com/in/kathy100davis</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fab fa-github text-2xl"></i>
-                            <div>
-                                <p class="font-semibold">GitHub</p>
-                                <a href="https://kathydavis.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition duration-300">kathydavis.github.io</a>
-                            </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                        </div>
-                        <div>
-                            <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white resize-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2024 Kathy Davis. All rights reserved.</p>
-            <div class="mt-4 space-x-6">
-                <a href="mailto:kathydavis.manualqa@gmail.com" class="hover:text-purple-400 transition duration-300">
-                    <i class="fas fa-envelope text-xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/kathy100davis" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition duration-300">
-                    <i class="fab fa-linkedin text-xl"></i>
-                </a>
-                <a href="https://kathydavis.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition duration-300">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
-            </div>
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">&copy; 2024 Kathy Davis. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
 
@@ -412,7 +563,7 @@
                         block: 'start'
                     });
                     // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
+                    document.getElementById('mobile-menu').classList.add('hidden');
                 }
             });
         });
@@ -421,34 +572,42 @@
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
             
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:kathydavis.manualqa@gmail.com?subject=${subject}&body=${body}`;
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
             
-            // Open email client
-            window.open(mailtoLink, '_blank');
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
-            // Show success message
-            alert('Thank you for your message! Your email client should open with the message ready to send.');
-            
-            // Reset form
-            this.reset();
+            setTimeout(() => {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
         });
 
         // Add scroll effect to navigation
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.classList.add('bg-white', 'shadow-lg');
+                nav.classList.add('shadow-xl');
             } else {
-                nav.classList.remove('shadow-lg');
+                nav.classList.remove('shadow-xl');
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98241f7bc2946a21',t:'MTc1ODQwMDY3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'982db43ce78310d7',t:'MTc1ODUwMTEzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
