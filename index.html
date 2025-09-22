@@ -3,467 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathy Davis - QA Portfolio</title>
+    <title>Kathy Davis - QA Manual Tester Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#6366f1',
-                        'secondary': '#8b5cf6',
-                    }
-                }
-            }
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-    </script>
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen">
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-primary">Kathy Davis</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-primary transition duration-300">About</a>
-                    <a href="#skills" class="text-gray-700 hover:text-primary transition duration-300">Skills</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
-                    <a href="#certifications" class="text-gray-700 hover:text-primary transition duration-300">Certifications</a>
-                    <a href="#projects" class="text-gray-700 hover:text-primary transition duration-300">Projects</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-800">Kathy Davis</h1>
+                    </div>
                 </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
                 </div>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition duration-300">About</a>
-                <a href="#skills" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Skills</a>
-                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
-                <a href="#certifications" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Certifications</a>
-                <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Projects</a>
-                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition duration-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                Quality Assurance
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                    Professional
-                </span>
-            </h1>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Dedicated to ensuring software excellence through meticulous testing, process improvement, and user-focused quality solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projects" class="bg-primary hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
-                    View My Work
-                </a>
-                <a href="#contact" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
-                    Get In Touch
-                </a>
+    <section id="home" class="gradient-bg text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    QA Manual Tester
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Ensuring Quality Through Meticulous Testing
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Me</h2>
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Passionate QA professional with a keen eye for detail and commitment to delivering high-quality software solutions.
+                </p>
+            </div>
+            
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Passionate About Quality</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">My Journey</h3>
                     <p class="text-gray-600 mb-6">
-                        With a keen eye for detail and a commitment to excellence, I specialize in comprehensive quality assurance processes that ensure software products meet the highest standards of functionality, usability, and reliability.
+                        As a dedicated QA Manual Tester, I bring precision and thoroughness to every project. My approach combines systematic testing methodologies with creative problem-solving to identify issues before they reach end users.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        My approach combines systematic testing methodologies with creative problem-solving to identify potential issues before they impact end users.
+                        I specialize in GUI testing, functional testing, and regression testing across web and mobile applications. My goal is to ensure that every product meets the highest standards of quality and user experience.
                     </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Detail-Oriented</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Problem Solver</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Team Player</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Continuous Learner</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-primary/20 to-secondary/20 p-8 rounded-2xl">
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                            <span class="text-4xl text-white font-bold">KD</span>
+                    
+                    <!-- Google Docs Portfolio -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                        <h4 class="text-lg font-semibold text-blue-800 mb-3">📋 My Test Case Portfolio</h4>
+                        <p class="text-sm text-blue-700 mb-3">Click to view my detailed test case documentation:</p>
+                        <div class="space-y-3">
+                            <div class="bg-white rounded p-3 border border-blue-100">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-800">📱 Task Management App - Test Cases</span>
+                                    <a href="https://docs.google.com/spreadsheets/d/1yWamGL-sjH1O-nW7ILW3wqrPMIhO8XPQVFXhnwX4KFQ/edit?usp=drive_link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                        View Document
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded p-3 border border-blue-100">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-800">🏠 Global Real Estate App - Test Cases</span>
+                                    <a href="https://docs.google.com/spreadsheets/d/175I7MmNpSnH0oNU1wKpKFx-6Too2jAQE0tqQDjz_SvY/edit?usp=drive_link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                        View Document
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded p-3 border border-blue-100">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-800">☕ Coffee Cafe App - Test Cases</span>
+                                    <a href="https://docs.google.com/spreadsheets/d/1T-OVdhQLsHdWrGfpwK70gSjyvv8vzFk0E8cBP4y1I8o/edit?usp=drive_link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+                                        View Document
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded p-3 border border-red-100">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-medium text-gray-800">🐛 Bug Report - Test Cases & Defects</span>
+                                    <a href="https://docs.google.com/spreadsheets/d/140l7ciSNw9HE6yZUYIbzkH6YlaqMWO5gsJFry1VskQw/edit?usp=drive_link" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="bg-red-600 text-white px-3 py-1 rounded text-sm hover:bg-red-700">
+                                        View Document
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Kathy Davis</h4>
-                        <p class="text-gray-600">QA Professional</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Skills & Expertise</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Manual Testing</h3>
-                    <p class="text-gray-600">Comprehensive manual testing strategies including functional, usability, and exploratory testing approaches.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Process Improvement</h3>
-                    <p class="text-gray-600">Identifying bottlenecks and implementing efficient QA processes to enhance team productivity and product quality.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Documentation</h3>
-                    <p class="text-gray-600">Creating clear, comprehensive test plans, bug reports, and quality documentation for stakeholder communication.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Mobile Testing</h3>
-                    <p class="text-gray-600">Cross-platform mobile application testing ensuring consistent user experience across devices and operating systems.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Team Collaboration</h3>
-                    <p class="text-gray-600">Working effectively with development teams, product managers, and stakeholders to ensure quality throughout the SDLC.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Performance Testing</h3>
-                    <p class="text-gray-600">Evaluating application performance, load handling, and identifying optimization opportunities for better user experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Instructors Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 - Bug Discovery -->
-                <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                            </svg>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Core Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Manual Testing</span>
+                                <span class="text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
                         </div>
-                        <div class="flex text-yellow-400">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Test Case Design</span>
+                                <span class="text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Bug Reporting</span>
+                                <span class="text-gray-500">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">GUI Testing</span>
+                                <span class="text-gray-500">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
                         </div>
                     </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "Awesome. Good job finding this bug. Keep it up."
-                    </blockquote>
-                    <div class="text-sm text-gray-600">
-                        <p class="font-semibold">QA Instructor</p>
-                        <p>Bug Discovery Excellence</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 - Test Execution -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex text-yellow-400">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Technologies & Tools</h4>
+                        <div class="flex flex-wrap">
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">TestRail</span>
+                            <span class="skill-tag">Chrome DevTools</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">GUI Testing</span>
+                            <span class="skill-tag">Smoke Testing</span>
+                            <span class="skill-tag">Regression Testing</span>
+                            <span class="skill-tag">Sanity Testing</span>
                         </div>
                     </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "Good job executing these test cases."
-                    </blockquote>
-                    <div class="text-sm text-gray-600">
-                        <p class="font-semibold">QA Instructor</p>
-                        <p>Test Execution Excellence</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 - Documentation -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex text-yellow-400">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </div>
-                    </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "I love how you created your steps. This is very easy to understand and follow. Keep up the good work."
-                    </blockquote>
-                    <div class="text-sm text-gray-600">
-                        <p class="font-semibold">QA Instructor</p>
-                        <p>Documentation Excellence</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Certifications</h2>
-            <div class="flex justify-center">
-                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 max-w-md">
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">QA Professional Certification</h3>
-                        <p class="text-lg text-primary font-semibold mb-2">Careerist Bootcamp</p>
-                        <p class="text-gray-600 mb-4">Comprehensive Quality Assurance training program covering manual testing, test case design, bug reporting, and industry best practices.</p>
-                        <div class="flex flex-wrap gap-2 justify-center mb-4">
-                            <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Manual Testing</span>
-                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1 rounded-full">Test Cases</span>
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Bug Reporting</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SDLC</span>
-                        </div>
-                        <a href="https://drive.google.com/file/d/1hJ2iAK6lEpDpqX9vCdCiIcDq9UZsu5wA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">
-                            View Certificate
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 - Calm App Analysis -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">Calm App</h4>
-                            <p class="text-sm opacity-90">UX Analysis</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Calm App Analysis</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive UX analysis of the Calm meditation app, evaluating user interface design, navigation flow, and accessibility features.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">UX Analysis</span>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Mobile App</span>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Accessibility</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <a href="https://drive.google.com/file/d/1rmhJ5C4EEq53AU9RPE8KvPvPYDXigkCu/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
-                            View Analysis
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 - Contract Management -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">Contract</h4>
-                            <p class="text-sm opacity-90">Management</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Contract Management App</h3>
-                    <p class="text-gray-600 mb-4">Complete testing documentation including test cases and bug reports. Features discovery of an intermittent bug that others missed during testing cycles.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Test Cases</span>
-                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Bug Discovery</span>
-                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Flaky Bug</span>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Documentation</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <a href="https://docs.google.com/spreadsheets/d/140l7ciSNw9HE6yZUYIbzkH6YlaqMWO5gsJFry1VskQw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
-                            View Test Cases & Bug Reports
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 - Global Real Estate -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">Real Estate</h4>
-                            <p class="text-sm opacity-90">Global App</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Global Real Estate App</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive testing of a global real estate platform. Discovered a critical navigation bug that trapped users in the help section with no return path - a unique find that others missed.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Critical Bug</span>
-                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Unique Discovery</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Navigation Testing</span>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">UX Impact</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <a href="https://docs.google.com/spreadsheets/d/175I7MmNpSnH0oNU1wKpKFx-6Too2jAQE0tqQDjz_SvY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
-                            View Test Cases & Bug Reports
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4 - Coffee Cafe App -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M2,21V19H20V21H2M20,8V5L18,5V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">Coffee Cafe</h4>
-                            <p class="text-sm opacity-90">Mobile App</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Coffee Cafe App</h3>
-                    <p class="text-gray-600 mb-4">Complete mobile app testing including functional test cases and detailed bug reports. Comprehensive coverage of ordering flow, payment processing, and user experience features.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Mobile Testing</span>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Test Cases</span>
-                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Bug Reports</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">E-commerce</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <a href="https://docs.google.com/spreadsheets/d/1T-OVdhQLsHdWrGfpwK70gSjyvv8vzFk0E8cBP4y1I8o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
-                            View Test Cases & Bug Reports
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5 - Task Management Environmental Testing -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M16.5,16L13.5,13.5V10.5H15V12.75L17.25,15L16.5,16M12.5,8A4.5,4.5 0 0,0 8,12.5A4.5,4.5 0 0,0 12.5,17A4.5,4.5 0 0,0 17,12.5A4.5,4.5 0 0,0 12.5,8Z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">Task Management</h4>
-                            <p class="text-sm opacity-90">Environment Testing</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Task Management Environmental Testing</h3>
-                    <p class="text-gray-600 mb-4">Specialized environmental testing for task management systems. Focus on cross-platform compatibility, performance under different conditions, and system integration testing.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Environmental Testing</span>
-                        <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">Cross-Platform</span>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">System Integration</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Performance</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <a href="https://docs.google.com/spreadsheets/d/1yWamGL-sjH1O-nW7ILW3wqrPMIhO8XPQVFXhnwX4KFQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center">
-                            View Environmental Test Cases
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6 - SQL Database Testing -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/>
-                            </svg>
-                            <h4 class="text-lg font-semibold">SQL Database</h4>
-                            <p class="text-sm opacity-90">Query Testing</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SQL Database Testing</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive SQL query testing and database validation. Multiple test scenarios covering data integrity, performance optimization, and complex query validation across different database systems.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">SQL Queries</span>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Database Testing</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Data Validation</span>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Performance</span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">Ready to View</span>
-                        <div class="space-y-2">
-                            <a href="https://drive.google.com/file/d/1EQkJh5RY0M1EwG4f8bFfGk9rkkUjFa2f/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
-                                SQL Queries Set 1
-                            </a>
-                            <a href="https://drive.google.com/file/d/1yzlPnhH-A2y76wLPFxk84ALkOBlptEEB/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
-                                SQL Queries Set 2
-                            </a>
-                            <a href="https://drive.google.com/file/d/1rjdFxi7d6uhmNbxxd4qGHTaRtakB1-1x/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 text-center text-sm">
-                                SQL Queries Set 3
-                            </a>
-                            <div class="flex space-x-2">
-                                <a href="https://drive.google.com/file/d/1N5jk7W3T0qL9kJSsvqIK1EIxhw-nAJqP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
-                                    Set 4
-                                </a>
-                                <a href="https://drive.google.com/file/d/1fhU0QvbzRNwbEUBzslKiqFfr62EnbN5-/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
-                                    Set 5
-                                </a>
-                                <a href="https://drive.google.com/file/d/1VbNhZvLkllZH1PSytqfwRr6KR0BZJ3mo/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 text-center text-xs">
-                                    Set 6
-                                </a>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Certifications</h4>
+                        <div class="space-y-3">
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800">QA Manual Testing Certification</h5>
+                                        <p class="text-sm text-gray-600">Careerist • 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-3">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800">Introduction to UX/UI Design</h5>
+                                        <p class="text-sm text-gray-600">Coursera • 2023</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -472,86 +242,425 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-gradient-to-br from-primary/10 to-secondary/10">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8">Let's Connect</h2>
-            <p class="text-xl text-gray-600 mb-12">
-                Ready to discuss how quality assurance can enhance your project? I'd love to hear from you.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600">
+                    A showcase of my testing expertise from coursework and training
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">Task Management App</h3>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-                    <p class="text-gray-600">kathy.davis@email.com</p>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">GUI & Functional Testing</h4>
+                        <p class="text-gray-600 mb-4">
+                            Performed comprehensive testing of task creation, assignment, and tracking features. Validated user workflows and interface functionality using Chrome DevTools and TestRail.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">GUI Testing</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Functional Testing</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Regression Testing</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">45 Test Cases</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6M8 8v10l4-4 4 4V8"></path>
-                        </svg>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">Global Real Estate App</h3>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">LinkedIn</h3>
-                    <p class="text-gray-600">linkedin.com/in/kathydavis</p>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Cross-Platform Testing</h4>
+                        <p class="text-gray-600 mb-4">
+                            Executed testing for property search, listing management, and user registration features. Used Android Studio for mobile testing and Jira for bug tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Mobile Testing</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Smoke Testing</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Sanity Testing</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">38 Test Cases</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0A1.5 1.5 0 004 13.546V6.5a1.5 1.5 0 011.5-1.5h15A1.5 1.5 0 0122 6.5v7.046z"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">Coffee Cafe App</h3>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Location</h3>
-                    <p class="text-gray-600">Available Remote</p>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">E-commerce & API Testing</h4>
+                        <p class="text-gray-600 mb-4">
+                            Tested ordering system, payment processing, and menu management features. Performed API testing with Postman and documented findings in TestRail. Includes comprehensive bug reports with defect documentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">API Testing</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">GUI Testing</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Regression Testing</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">42 Test Cases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-cyan-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">Contract Management App</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Document & Workflow Testing</h4>
+                        <p class="text-gray-600 mb-4">
+                            Validated contract creation, approval workflows, and document management features. Focused on data integrity and user permission testing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Functional Testing</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Smoke Testing</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Sanity Testing</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">35 Test Cases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">SQL Database Testing</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Database Query Validation</h4>
+                        <p class="text-gray-600 mb-4">
+                            Executed SQL queries for data validation and integrity testing. Performed database testing scenarios including CRUD operations and data relationships.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">SQL Testing</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Data Validation</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">CRUD Operations</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">6 SQL Examples</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">Testing Documentation</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Test Case Design & Bug Reports</h4>
+                        <p class="text-gray-600 mb-4">
+                            Created comprehensive test cases, documented bug reports in Jira, and maintained testing documentation in TestRail across all projects.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Test Case Design</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Bug Reporting</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Documentation</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">160+ Total Test Cases</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h3>
-                <form class="space-y-6" id="contact-form">
-                    <div class="grid md:grid-cols-2 gap-6">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What My Teachers Say</h2>
+                <p class="text-xl text-gray-600">
+                    Feedback from my instructors and mentors
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-lg p-8 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Awesome. Good job finding this bug. Keep it up."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">QA Testing Instructor</h4>
+                            <p class="text-gray-500 text-sm">Course Feedback</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-lg p-8 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Good job executing these test cases."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Testing Lab Coordinator</h4>
+                            <p class="text-gray-500 text-sm">Course Feedback</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-lg p-8 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "I love how you created your steps. This is very easy to understand and follow. Keep up the good work."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Course Instructor</h4>
+                            <p class="text-gray-500 text-sm">Course Feedback</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Let's Connect</h2>
+                <p class="text-xl text-gray-600">
+                    Ready to discuss how I can contribute to your QA team
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-6">I'm always interested in new opportunities and collaborations. Let's connect!</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Email</h3>
+                                <p class="text-gray-600">kathydavis.manualqa@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Location</h3>
+                                <p class="text-gray-600">St. Louis, MO</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/kathy100davis" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">linkedin.com/in/kathy100davis</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">GitHub</h3>
+                                <a href="https://kathydavis.github.io" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">kathydavis.github.io</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
+                        
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
-                        Send Message
-                    </button>
-                </form>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-400">&copy; 2024 Kathy Davis. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Kathy Davis</h3>
+                <p class="text-gray-300 mb-6">QA Manual Tester | Ensuring Quality Through Precision</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/kathy100davis" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://kathydavis.github.io" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:kathydavis.manualqa@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700">
+                    <p class="text-gray-400">&copy; 2024 Kathy Davis. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -562,52 +671,55 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
-                    document.getElementById('mobile-menu').classList.add('hidden');
                 }
             });
         });
 
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
             
             // Get form data
-            const formData = new FormData(this);
+            const formData = new FormData(event.target);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
             
-            // Simple validation
-            if (!name || !email || !subject || !message) {
-                alert('Please fill in all fields.');
-                return;
-            }
+            // Create mailto link
+            const mailtoLink = `mailto:kathydavis.manualqa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+            // Open email client
+            window.location.href = mailtoLink;
             
-            setTimeout(() => {
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
+            // Show success message
+            alert('Thank you for your message! Your email client should open now.');
+            
+            // Reset form
+            event.target.reset();
+        }
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-xl');
-            } else {
-                nav.classList.remove('shadow-xl');
-            }
+        // Add active state to navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-blue-600');
+                }
+            });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'982db43ce78310d7',t:'MTc1ODUwMTEzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9830515d5148dd95',t:'MTc1ODUyODU0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
