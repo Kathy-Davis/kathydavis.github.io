@@ -603,16 +603,21 @@
             observer.observe(section);
         });
 
-    // Portfolio button interactions
+   // Portfolio button interactions - DEBUG VERSION
+document.querySelectorAll('.btn-primary').forEach(button => {
+    console.log('Found button:', button.textContent, button.className);
+});
+
 document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const buttonText = this.textContent;
         console.log('Button clicked:', buttonText);
+        console.log('Does it include "Test Analysis"?', buttonText.includes('Test Analysis'));
         
-        if (buttonText.includes('View Test Analysis')) {
-            window.open('https://Kathy-Davis.github.io/portfolio/task-management-app-testing', '_blank');
-        }   
+       if (buttonText.trim().includes('Test Analysis')) {
+    window.open('https://Kathy-Davis.github.io/portfolio/task-management-app-testing', '_blank');
+} 
             });
         
 
