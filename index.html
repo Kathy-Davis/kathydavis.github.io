@@ -603,14 +603,15 @@
             observer.observe(section);
         });
 
-        // Portfolio button interactions
-        document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Add your navigation logic here
-                console.log('Button clicked:', this.textContent);
-                 if (buttonText.includes('Task Management')) {
-            window.open('https://Kathy-Davis.github.io/portfolio/task-management-app-testing', '_blank');
+     // Portfolio button interactions
+document.querySelectorAll('.btn-primary').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const buttonText = this.textContent;
+        console.log('Button clicked:', buttonText);
+        
+        if (buttonText.includes('Task Management')) {
+            window.open('https://Kathy-Davis.github.io/portfolio/task-management-app-testing', '_blank');   
             });
         });
 
