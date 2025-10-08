@@ -603,7 +603,7 @@
             observer.observe(section);
         });
 
-  // Portfolio button interactions
+     // Portfolio button interactions
 document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
@@ -611,6 +611,8 @@ document.querySelectorAll('.btn-primary').forEach(button => {
         
         if (buttonText.trim().includes('Test Analysis')) {
             window.open('https://Kathy-Davis.github.io/portfolio/task-management-app-testing', '_blank');
+        } else if (buttonText.trim().includes('Explore My Process')) {
+            window.open('https://Kathy-Davis.github.io/portfolio/coffee-cafe-app-testing', '_blank');
         }
     });
 }); 
