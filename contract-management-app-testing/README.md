@@ -1,12 +1,12 @@
 # Contract Management App: Mobile Legal Platform Testing
 
-**Project Description:** A mobile legal platform enabling individuals and small businesses to create, sign, and manage contracts without traditional legal services. The project focused on validating end-to-end contract workflows, AI-powered contract analysis, and secure multi-party digital signatures in a mobile environment.
+## Project Description
+A mobile legal platform enabling individuals and small businesses to create, sign, and manage contracts without traditional legal services. The project focused on validating end-to-end contract workflows, AI-powered contract analysis, and secure multi-party digital signatures in a mobile environment.
 
-**My Testing Process & Strategy:**
-
+## My Testing Process & Strategy
 This was a comprehensive validation of a mobile legal platform's core functionality and user experience. My primary objective was to ensure reliable contract creation, AI-assisted analysis, and secure digital signing processes across various user scenarios. I employed methodical testing approaches to validate both functional requirements and user experience consistency.
 
-**My systematic approach included:**
+My systematic approach included:
 
 **Authentication & Onboarding Validation:** Testing multiple login methods (social media, email, phone number) to ensure secure and flexible access for diverse user preferences, including negative testing for error handling.
 
@@ -18,10 +18,9 @@ This was a comprehensive validation of a mobile legal platform's core functional
 
 **Integration & Compatibility Testing:** Verifying external integrations including email contact links and social media authentication, ensuring seamless connectivity with third-party services.
 
-**[View Complete Test Documentation on Google Drive](https://docs.google.com/spreadsheets/d/1Usl1jjNAkq7oaDkxVcjwF9klKC5WEQorLGDUkMmwoFc/edit?usp=sharing)**
+*View Complete Test Documentation on Google Drive*
 
-**Key Takeaways & Lessons Learned**
-
+## Key Takeaways & Lessons Learned
 This project provided deep insight into mobile legal technology validation and the critical importance of secure document handling in contract management applications.
 
 **Mastered Mobile Legal Tech Validation:** Gained expertise in testing digital signature workflows, multi-party approval processes, and secure document storage specific to legal compliance requirements.
