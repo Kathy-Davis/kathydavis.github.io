@@ -1,11 +1,10 @@
-**Coffee Cafe App: End-to-End Workflow & UI Validation**
+# Coffee Cafe App: End-to-End Workflow & UI Validation
 
-Project Description:
+## Project Description
 A full-featured web application for a coffee cafe, combining e-commerce food ordering with restaurant reservation management. The platform allows users to browse menus, place delivery orders, and book tables—all within a single integrated system.
 
-**My Testing Process & Strategy:**
-
-**My testing strategy employed a multi-layered approach to ensure both functional reliability and UI compliance:**
+## My Testing Process & Strategy
+My testing strategy employed a multi-layered approach to ensure both functional reliability and UI compliance:
 
 **Smoke Testing & Core Navigation:** Initially verified critical pathways to ensure the application was stable for deeper testing, particularly focusing on accessing the main menu and cart functionality.
 
@@ -16,11 +15,10 @@ A full-featured web application for a coffee cafe, combining e-commerce food ord
 **Negative Testing Scenarios:** Designed tests to break expected workflows, including invalid form entries, edge cases for quantity selection, and testing error handling mechanisms.
 
 **Cross-Device Compatibility:** Tested the screen rotation feature and responsive design to ensure consistent user experience across different device orientations and sizes.
-For the full set of test cases, detailed bug reports, and test execution logs, please see the complete document:
 
-**[View Complete Test Documentation on Google Drive](https://docs.google.com/spreadsheets/d/1T-OVdhQLsHdWrGfpwK70gSjyvv8vzFk0E8cBP4y1I8o/edit?usp=sharingyour)**
+*View Complete Test Documentation on Google Drive*
 
-**Key Takeaways & Lessons Learned:**
+## Key Takeaways & Lessons Learned
 
 **Bridging PRD to Reality:** Gained invaluable experience translating extensive written requirements into actionable, precise test cases, ensuring pixel-perfect UI implementation.
 
