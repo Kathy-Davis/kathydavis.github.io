@@ -14,7 +14,7 @@ My testing focused on validating the core workflows that real estate agents depe
 
 **Core Feature Sanity Testing:** Conducted validation of key platform features including property search filters, data presentation for off-plan projects, and access to payment plan information.
 
-*View Complete Test Documentation on Google Drive* https://docs.google.com/spreadsheets/d/1oGbDIYjfdgMeDZ0YDNHv-JGI_nxBDr9CaGfjO3MJA5w/edit?usp=sharing 
+[View Complete Test Documentation on Google Drive](https://docs.google.com/spreadsheets/d/1oGbDIYjfdgMeDZ0YDNHv-JGI_nxBDr9CaGfjO3MJA5w/edit?usp=sharing) 
 
 ## Key Takeaways & Lessons Learned
 
